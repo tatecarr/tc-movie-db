@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => 'home'
+  map.root :controller => 'movies'
   
   map.resources :home
   

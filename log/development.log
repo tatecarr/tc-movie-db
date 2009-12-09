@@ -5062,3 +5062,44 @@ Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:06:16) [GET]
 Rendering template within layouts/movies
 Rendering movies/index
 Completed in 31ms (View: 13, DB: 1) | 200 OK [http://localhost/movies?search=hobbit]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:29:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-09 10:29:40) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:29:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:29:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:29:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/movies]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:29:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
