@@ -1,0 +1,8 @@
+<h1>Search for a movie!</h1>
+
+
+<% for movie in @results %>
+
+	<p> <%= link_to movie.name, movie.url %></p>
+
+<% end %>

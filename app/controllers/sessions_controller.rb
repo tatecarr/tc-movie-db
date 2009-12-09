@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
     else
       flash.now[:error] = "Invalid login or password."
       render :action => 'new'
-    end
+    end    
+          
   end
   
   def destroy

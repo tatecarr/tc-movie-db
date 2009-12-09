@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
   
   def create
+    puts params[:user].length
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
@@ -12,5 +13,5 @@ class UsersController < ApplicationController
     else
       render :action => 'new'
     end
-  end
+  end  
 end

@@ -1,0 +1,58 @@
+<h1>Listing movies</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Overview</th>
+  </tr>
+
+<% form_tag movies_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search", :name => nil %>
+	</p>
+<% end %>
+
+<% if @results %>
+	<p>There are results!</p>
+	<% @results.each do |result| %>
+		<p
+		
+			<% if result.posters != nil %>
+				
+				<%= link_to result.name, result.url %>
+				<% puts result.name %>
+				
+				<% if result.posters[0] == nil || result.posters[0]['thumb'] == nil %>
+				 	No image available.
+				<% else %>
+					<% puts "shouldn't be here if no thumb" %>
+					<% puts result.posters[0]['thumb'] %>
+					<img src=<%= result.posters[0]['thumb'] %> />
+				<% end %>
+				
+			<% end %>
+			
+			<%= link_to 'Watch the trailer!', result.trailer %>
+			
+		</p><br/><br/>
+	<% end %>
+<% else %>
+	<p>No results, sorry!</p>
+	<% puts @results %>
+<% end %>
+
+<% @movies.each do |movie| %>
+  <tr>
+    <td><%=h movie.title %></td>
+    <td><%=h movie.overview %></td>
+    <td><%= link_to 'Show', movie %></td>
+    <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+    <td><%= link_to 'Destroy', movie, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New movie', new_movie_path %>
