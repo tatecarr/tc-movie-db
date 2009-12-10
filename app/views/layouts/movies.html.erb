@@ -11,7 +11,22 @@
 
 <p style="color: green"><%= flash[:notice] %></p>
 
-<%= yield %>
+<div align="center">
+	
+	<div id="logout" align="right" style="width:1000px">
+		<% if logged_in? %>
+		<p>You are logged in as <%= current_user.username %></p>
+		<p>Click here to <%= link_to "Logout", logout_path %></p>
+		<% end %>
+	</div>
+	
+	<div style="width:1000px">
+		
+		<%= yield %>
+		
+	</div>
+	
+</div>
 
 </body>
 </html>

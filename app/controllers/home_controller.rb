@@ -11,8 +11,8 @@ class HomeController < ApplicationController
   def search
     
     
-    require 'rubygems'
-    require 'tmdb_party'
+    #require 'rubygems'
+    #require 'tmdb_party'
 
     #@tmdb = TMDBParty::Base.new('b81cd5766890f20ece59ed3ad4573173')
     #@results = @tmdb.search('rat race')

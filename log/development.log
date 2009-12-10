@@ -5103,3 +5103,1490 @@ Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:29:43) [GET]
   Parameters: {"action"=>"new", "controller"=>"sessions"}
 Rendering sessions/new
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:34:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:34:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:34:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:34:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-09 10:34:41) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:34:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:34:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-09 10:34:48) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:34:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:34:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:34:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:34:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:47:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the holiday"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/movies?search=the+holiday]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 10:47:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-09 10:47:27) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Redirected to http://localhost:3000/movies?search=the+holiday
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:47:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the holiday"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 20426ms (View: 18181, DB: 1) | 200 OK [http://localhost/movies?search=the+holiday]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:48:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"rat race"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 984ms (View: 510, DB: 1) | 200 OK [http://localhost/movies?search=rat+race]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 10:48:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 2236ms (View: 1665, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 18:54:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"holliday"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.7ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 710ms (View: 11, DB: 2) | 200 OK [http://localhost/movies?search=holliday]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 18:54:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the holliday"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 865ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=the+holliday]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 18:54:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the holiday"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 20304ms (View: 17419, DB: 1) | 200 OK [http://localhost/movies?search=the+holiday]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091203022758)
+Migrating to AddNameToUser (20091203023845)
+Migrating to RemoveAgeFromUser (20091203024633)
+Migrating to CreateMovies (20091203035505)
+Migrating to CreateWatcheds (20091210004040)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TABLE "watcheds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "movie_id" integer, "comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091210004040')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("movies")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("watcheds")[0m
+
+
+Processing WatchedsController#index (for 127.0.0.1 at 2009-12-09 19:42:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"watcheds"}
+  [4;35;1mWatched Load (0.5ms)[0m   [0mSELECT * FROM "watcheds" [0m
+Rendering template within layouts/watcheds
+Rendering watcheds/index
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/watcheds]
+
+
+Processing WatchedsController#new (for 127.0.0.1 at 2009-12-09 19:42:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"watcheds"}
+Rendering template within layouts/watcheds
+Rendering watcheds/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/watcheds/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-09 19:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/movi" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 19:42:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 7, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:29:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:29:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1837ms (View: 1235, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:30:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 10583ms (View: 8971, DB: 0) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:32:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 2038ms (View: 1520, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:33:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 3219ms (View: 3204, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:34:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1035ms (View: 486, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:34:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:34:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.6ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:34:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 107ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:44:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 776ms (View: 450, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:49:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 842ms (View: 497, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:49:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `to_d' for Fri, 11 Mar 2005:Date) on line #42 of app/views/movies/index.html.erb:
+39: 			<%= link_to 'View IMDB page', @imdb_base_url+result.imdb_id+"/"%>
+40: 			<br/>
+41: 			<%= result.overview %> <br/>
+42: 			<%= result.released.to_d %>
+43: 			
+44: 		</p><br/><br/>
+45: 	<% end %>
+
+    app/views/movies/index.html.erb:42
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:49:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 36ms (View: 20, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 21:50:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `time_in_words' for #<ActionView::Base:0x10448d758>) on line #42 of app/views/movies/index.html.erb:
+39: 			<%= link_to 'View IMDB page', @imdb_base_url+result.imdb_id+"/"%>
+40: 			<br/>
+41: 			<%= result.overview %> <br/>
+42: 			<%= time_in_words(result.released) %>
+43: 			
+44: 		</p><br/><br/>
+45: 	<% end %>
+
+    app/views/movies/index.html.erb:42
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (58.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:00:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1050ms (View: 591, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:00:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 31ms (View: 15, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091203022758)
+Migrating to AddNameToUser (20091203023845)
+Migrating to RemoveAgeFromUser (20091203024633)
+Migrating to CreateMovies (20091203035505)
+Migrating to CreateWatcheds (20091210004040)
+Migrating to RemoveTitleFromMovie (20091210031129)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TEMPORARY TABLE "altered_movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "overview" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("movies")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "movies"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "overview" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_movies")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "altered_movies"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210031129')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("movies")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("watcheds")[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:15:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `title' for #<Movie:0x1041203e0>) on line #53 of app/views/movies/index.html.erb:
+50: 
+51: <% @movies.each do |movie| %>
+52:   <tr>
+53:     <td><%=h movie.title %></td>
+54:     <td><%=h movie.overview %></td>
+55:     <td><%= link_to 'Show', movie %></td>
+56:     <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+
+    app/views/movies/index.html.erb:53
+    app/views/movies/index.html.erb:51:in `each'
+    app/views/movies/index.html.erb:51
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (53.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:15:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `title' for #<Movie:0x1041ec990>) on line #53 of app/views/movies/index.html.erb:
+50: 
+51: <% @movies.each do |movie| %>
+52:   <tr>
+53:     <td><%=h movie.title %></td>
+54:     <td><%=h movie.overview %></td>
+55:     <td><%= link_to 'Show', movie %></td>
+56:     <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+
+    app/views/movies/index.html.erb:53
+    app/views/movies/index.html.erb:51:in `each'
+    app/views/movies/index.html.erb:51
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (128.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:20:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `name' for #<Movie:0x10432db88>) on line #53 of app/views/movies/index.html.erb:
+50: 
+51: <% @movies.each do |movie| %>
+52:   <tr>
+53:     <td><%=h movie.name %></td>
+54:     <td><%=h movie.overview %></td>
+55:     <td><%= link_to 'Show', movie %></td>
+56:     <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+
+    app/views/movies/index.html.erb:53
+    app/views/movies/index.html.erb:51:in `each'
+    app/views/movies/index.html.erb:51
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (50.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091203022758)
+Migrating to AddNameToUser (20091203023845)
+Migrating to RemoveAgeFromUser (20091203024633)
+Migrating to CreateMovies (20091203035505)
+Migrating to CreateWatcheds (20091210004040)
+Migrating to RemoveTitleFromMovie (20091210031129)
+Migrating to AddNameToMovie (20091210031159)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "movies" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091210031159')[0m
+Migrating to AddAttributesToMovie (20091210032118)
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "movies" ADD "imdb_id" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "movies" ADD "released" datetime[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "movies" ADD "original_img_url" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "movies" ADD "thumb_img_url" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210032118')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("movies")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("watcheds")[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:21:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 36ms (View: 18, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:28:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"holy"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `strftime' for "":String) on line #42 of app/views/movies/index.html.erb:
+39: 			<%= link_to 'View IMDB page', @imdb_base_url+result.imdb_id+"/"%>
+40: 			<br/>
+41: 			<%= result.overview %> <br/>
+42: 			<%= result.released.strftime("%B %d, %Y") %>
+43: 			
+44: 		</p><br/><br/>
+45: 	<% end %>
+
+    app/views/movies/index.html.erb:42
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:29:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"holy"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1987ms (View: 1970, DB: 1) | 200 OK [http://localhost/movies?search=holy]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:31:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"holy"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 17328ms (View: 16048, DB: 1) | 200 OK [http://localhost/movies?search=holy]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-12-09 22:36:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+
+ActionView::TemplateError (undefined method `title' for #<Movie:0x103f2db00>) on line #3 of app/views/movies/show.html.erb:
+1: <p>
+2:   <b>Title:</b>
+3:   <%=h @movie.title %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/movies/show.html.erb:3
+    app/controllers/movies_controller.rb:38:in `show'
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091203022758)
+Migrating to AddNameToUser (20091203023845)
+Migrating to RemoveAgeFromUser (20091203024633)
+Migrating to CreateMovies (20091203035505)
+Migrating to CreateWatcheds (20091210004040)
+Migrating to RemoveTitleFromMovie (20091210031129)
+Migrating to AddNameToMovie (20091210031159)
+Migrating to AddAttributesToMovie (20091210032118)
+Migrating to RemoveNameFromMovies (20091210034712)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TEMPORARY TABLE "altered_movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "overview" text, "created_at" datetime, "updated_at" datetime, "name" varchar(255), "imdb_id" varchar(255), "released" datetime, "original_img_url" varchar(255), "thumb_img_url" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("movies")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "movies"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "overview" text, "created_at" datetime, "updated_at" datetime, "imdb_id" varchar(255), "released" datetime, "original_img_url" varchar(255), "thumb_img_url" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_movies")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP TABLE "altered_movies"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210034712')[0m
+Migrating to AddTitleToMovie (20091210034736)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "movies" ADD "title" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091210034736')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("movies")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("watcheds")[0m
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-12-09 22:47:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/movies/1]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2009-12-09 22:48:00) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/edit
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://localhost/movies/1/edit]
+
+
+Processing MoviesController#update (for 127.0.0.1 at 2009-12-09 22:48:05) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "id"=>"1", "movie"=>{"title"=>"Lord of the Rings", "overview"=>"One of the best movies ever.  A classic."}, "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+  [4;36;1mMovie Update (0.3ms)[0m   [0;1mUPDATE "movies" SET "updated_at" = '2009-12-10 03:48:05', "title" = 'Lord of the Rings' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/movies/1
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/movies/1]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-12-09 22:48:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"movies"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://localhost/movies/1]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:48:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:48:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 11210ms (View: 1683, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 22:48:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 37ms (View: 19, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:14:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1444ms (View: 931, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:15:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 30ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:15:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `strftime' for "":String) on line #36 of app/views/movies/index.html.erb:
+33: 				</td>
+34: 				<td>
+35: 					<% if result.released != nil %>
+36: 						<%= result.released.strftime("%B %d, %Y") %>
+37: 					<% end %>
+38: 				</td>
+39: 				
+
+    app/views/movies/index.html.erb:36
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:15:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined local variable or method `datetime' for #<ActionView::Base:0x10424a658>) on line #35 of app/views/movies/index.html.erb:
+32: 					<%= result.overview %> <br/>
+33: 				</td>
+34: 				<td>
+35: 					<% if result.released.type == datetime %>
+36: 						<%= result.released.strftime("%B %d, %Y") %>
+37: 					<% end %>
+38: 				</td>
+
+    app/views/movies/index.html.erb:35
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (126.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:16:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined method `to_d' for Wed, 18 Dec 2002:Date) on line #35 of app/views/movies/index.html.erb:
+32: 					<%= result.overview %> <br/>
+33: 				</td>
+34: 				<td>
+35: 					<%= result.released.to_d.strftime("%B %d, %Y") %>
+36: 				</td>
+37: 				
+38: 			</tr>
+
+    app/views/movies/index.html.erb:35
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (132.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:18:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (private method `gsub!' called for Wed, 18 Dec 2002:Date) on line #35 of app/views/movies/index.html.erb:
+32: 					<%= result.overview %> <br/>
+33: 				</td>
+34: 				<td>
+35: 					<%= Date.parse(result.released).strftime("%B %d, %Y") %>
+36: 				</td>
+37: 				
+38: 			</tr>
+
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:1061:in `_parse'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:999:in `parse'
+    app/views/movies/index.html.erb:35
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (125.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:19:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined local variable or method `string' for #<ActionView::Base:0x104375cd0>) on line #35 of app/views/movies/index.html.erb:
+32: 					<%= result.overview %> <br/>
+33: 				</td>
+34: 				<td>
+35: 					<% unless result.type == string %>
+36: 						<%= result.released.strftime("%B %d, %Y") %>
+37: 					<% end %>
+38: 				</td>
+
+    app/views/movies/index.html.erb:35
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (124.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:21:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.9ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.<) on line #35 of app/views/movies/index.html.erb:
+32: 					<%= result.overview %> <br/>
+33: 				</td>
+34: 				<td>
+35: 					<%= result.released.to_date.strftime("%B %d, %Y") %>
+36: 				</td>
+37: 				
+38: 			</tr>
+
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+    app/views/movies/index.html.erb:35
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (53.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:21:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:21:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1530ms (View: 906, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:22:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 30ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:22:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.<) on line #36 of app/views/movies/index.html.erb:
+33: 				</td>
+34: 				<td>
+35: 					<% puts result.released.type %>
+36: 					<%= result.released.to_date.strftime("%B %d, %Y") %>
+37: 				</td>
+38: 				
+39: 			</tr>
+
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:621:in `valid_civil?'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:751:in `new'
+    app/views/movies/index.html.erb:36
+    app/views/movies/index.html.erb:18:in `each'
+    app/views/movies/index.html.erb:18
+    app/controllers/movies_controller.rb:26:in `index'
+
+Rendered rescues/_trace (128.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:24:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 8443ms (View: 7108, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:24:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.5ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1993ms (View: 1067, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:25:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 123ms (View: 107, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:25:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.5ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 46ms (View: 29, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:26:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 7666ms (View: 6774, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:28:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 10429ms (View: 7837, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:28:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"rat race"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 2565ms (View: 1342, DB: 1) | 200 OK [http://localhost/movies?search=rat+race]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:29:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"rat race"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 105ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=rat+race]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:30:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"rat race"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 31ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=rat+race]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:32:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"rat race"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 2940ms (View: 1376, DB: 1) | 200 OK [http://localhost/movies?search=rat+race]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:33:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"rat race"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 105ms (View: 91, DB: 1) | 200 OK [http://localhost/movies?search=rat+race]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:35:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"rat race"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1255ms (View: 762, DB: 1) | 200 OK [http://localhost/movies?search=rat+race]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:35:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 12381ms (View: 11062, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:36:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 47ms (View: 31, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:37:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 120ms (View: 31, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:37:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 20565ms (View: 17934, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:38:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 48ms (View: 33, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:39:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 123ms (View: 31, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:39:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 44ms (View: 29, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:39:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1809ms (View: 1423, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:40:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 33ms (View: 16, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:41:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 31ms (View: 17, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:41:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 2335ms (View: 1317, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:42:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:42:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:43:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:43:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:43:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 4221ms (View: 3451, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:44:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:44:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:45:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 29ms (View: 13, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:45:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 27ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:45:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:45:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.5ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 3642ms (View: 2288, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:45:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:45:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:46:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:47:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:47:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:52:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1808ms (View: 1469, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:52:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"caddyshack"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.6ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/movies?search=caddyshack]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-09 23:52:56) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:52:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 23:52:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-09 23:53:01) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/sessions]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:53:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 93ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:53:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 2639ms (View: 1150, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:54:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-09 23:54:38) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:54:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-09 23:54:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-09 23:54:41) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:54:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 19ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:55:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 2233ms (View: 1773, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:56:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-09 23:56:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-10 13:31:43) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 13:31:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-10 13:31:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-10 13:31:47) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (20.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Rendering sessions/new
+Completed in 32ms (View: 2, DB: 21) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-10 13:31:52) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Rendering sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-10 13:31:55) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"cBRnGzBLzk1pWDGvXbMTsgelEmdGe4dEnyNk0ISMDGQ=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 75ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 13:31:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (1.1ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 13:32:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 5788ms (View: 1272, DB: 1) | 200 OK [http://localhost/movies?search=talladega]

@@ -6,6 +6,7 @@ class MoviesController < ApplicationController
   # GET /movies.xml
   def index
     @movies = Movie.all
+    @imdb_base_url = "http://www.imdb.com/title/"
 
     require 'rubygems'
     require 'tmdb_party'
@@ -15,12 +16,7 @@ class MoviesController < ApplicationController
     
     if params[:search]
       @results = @tmdb.search(params[:search])
-      puts @results.length
-    else
-      puts "No results.  Sorry."
     end
-
-
 
     respond_to do |format|
       format.html # index.html.erb

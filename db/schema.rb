@@ -9,13 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091203035505) do
+ActiveRecord::Schema.define(:version => 20091210034736) do
 
   create_table "movies", :force => true do |t|
-    t.string   "title"
     t.text     "overview"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imdb_id"
+    t.datetime "released"
+    t.string   "original_img_url"
+    t.string   "thumb_img_url"
+    t.string   "title"
   end
 
   create_table "users", :force => true do |t|
@@ -27,6 +31,14 @@ ActiveRecord::Schema.define(:version => 20091203035505) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+  end
+
+  create_table "watcheds", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "movie_id"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
