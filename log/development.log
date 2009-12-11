@@ -6590,3 +6590,344 @@ Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 13:32:02) [GET]
 Rendering template within layouts/movies
 Rendering movies/index
 Completed in 5788ms (View: 1272, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:01:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1599ms (View: 1147, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:08:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+ERROR: compiling _run_erb_app47views47movies47index46html46erb RAISED compile error
+/Users/Tate/Documents/2.Internet Programming/Rails/tc-movie-db/app/views/movies/index.html.erb:54: syntax error, unexpected ';'
+;  @result_counter++ ; @output_buffer.concat "\n\t\t\t\n\t\t"
+                      ^
+Function body:           def _run_erb_app47views47movies47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Search for a movie</h1>\n\n"
+
+;  form_tag movies_path, :method => 'get' do ; @output_buffer.concat "\n\t<p>\n\t\t"
+
+; @output_buffer.concat(( text_field_tag :search, params[:search] ).to_s); @output_buffer.concat "\n\t\t"
+; @output_buffer.concat(( submit_tag "Search", :name => nil ).to_s); @output_buffer.concat "\n\t</p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+;  if @results ; @output_buffer.concat "\n\t<table style=\"border:solid; border-width:1px;>\n\t\t\n\t\t<tr align=\"center\">\n\t\t\t<td></td>\n\t\t\t<td><b>Title</b></td>\n\t\t\t<td></td>\n\t\t\t<td><b>Plot overview</b></td>\n\t\t\t<td><b>Release date</b></td>\n\t\t</tr>\n\t\t\n\t\t"
+
+
+
+
+
+
+
+
+
+
+;  @results.each do |result| ; @output_buffer.concat "\n\t\t\t"
+;  puts @result_counter ; @output_buffer.concat "\n\t\t\t"
+;  form_tag movies_path, :method => :put do ; @output_buffer.concat "\n\t\t\t\n\t\t\t\t<tr>\n\t\t\t\t\n\t\t\t\t\t<td>\n\t\t\t\t\t\t"
+
+
+
+
+; @output_buffer.concat(( check_box_tag "result_num"  ).to_s); @output_buffer.concat "\n\t\t\t\t\t</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t"
+
+
+; @output_buffer.concat(( link_to result.name, @imdb_base_url+result.imdb_id+"/").to_s); @output_buffer.concat "\n\t\t\t\t\t</td>\t\t\t\t\n\t\t\t\t\t<td>\n\t\t\t\t\t\t"
+
+
+;  if result.posters[0] == nil || result.posters[0]['thumb'] == nil ; @output_buffer.concat "\n\t\t\t\t\t\t \tNo image<br/>available.\n\t\t\t\t\t\t"
+
+;  else ; @output_buffer.concat "\n\t\t\t\t\t\t\t<img src="
+; @output_buffer.concat(( result.posters[0]['thumb'] ).to_s); @output_buffer.concat " />\n\t\t\t\t\t\t"
+;  end ; @output_buffer.concat "\n\t\t\t\t\t</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t"
+
+
+; @output_buffer.concat(( result.overview ).to_s); @output_buffer.concat " <br/>\n\t\t\t\t\t</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t"
+
+
+;  puts result.released.class ; @output_buffer.concat "\n\t\t\t\t\t\t"
+;  if result.released != nil && result.released.class != String ; @output_buffer.concat "\n\t\t\t\t\t\t\t"
+; @output_buffer.concat(( result.released.to_date.strftime("%B %d, %Y") ).to_s); @output_buffer.concat "\n\t\t\t\t\t\t"
+;  end ; @output_buffer.concat "\n\t\t\t\t\t</td>\n\t\t\t\n\t\t\t\t</tr>\n\t\t\t\t\n\t\t\t"
+
+
+
+
+;  end ; @output_buffer.concat "\n\t\t\t\n\t\t\t"
+
+;  @result_counter++ ; @output_buffer.concat "\n\t\t\t\n\t\t"
+
+;  end ; @output_buffer.concat "\n\t</table>\n"
+
+;  else ; @output_buffer.concat "\n\t<p>No results, sorry!</p>\n"
+
+;  end ; @output_buffer.concat "\n\n<br />\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Tate/Documents/2.Internet Programming/Rails/tc-movie-db/app/views/movies/index.html.erb:66:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/Tate/Documents/2.Internet Programming/Rails/tc-movie-db/app/controllers/movies_controller.rb:22:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Tate/Documents/2.Internet Programming/Rails/tc-movie-db/app/views/movies/index.html.erb:54: syntax error, unexpected ';'
+;  @result_counter++ ; @output_buffer.concat "\n\t\t\t\n\t\t"
+                      ^) on line #54 of app/views/movies/index.html.erb:
+51: 				
+52: 			<% end %>
+53: 			
+54: 			<% @result_counter++ %>
+55: 			
+56: 		<% end %>
+57: 	</table>
+
+    app/views/movies/index.html.erb:66:in `compile!'
+    app/controllers/movies_controller.rb:22:in `index'
+
+Rendered rescues/_trace (47.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:08:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 486ms (View: 470, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:09:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 25ms (View: 7, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:09:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 9486ms (View: 8223, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:15:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 4239ms (View: 3693, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:18:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 4207ms (View: 3581, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:21:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"lord of the rings"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 4008ms (View: 3380, DB: 1) | 200 OK [http://localhost/movies?search=lord+of+the+rings]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:22:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"the interpreter"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 1670ms (View: 1142, DB: 1) | 200 OK [http://localhost/movies?search=the+interpreter]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:24:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+
+ActionView::TemplateError (undefined local variable or method `seenit_movies_path' for #<ActionView::Base:0x1042de970>) on line #13 of app/views/movies/index.html.erb:
+10: <% if @results %>
+11: 	<table style="border:solid; border-width:1px;>
+12: 		
+13: 		<% form_tag seenit_movies_path, :method => :put do %>
+14: 		
+15: 			<tr align="center">
+16: 				<td><%= submit_tag "Seen it!" %></td>
+
+    app/views/movies/index.html.erb:13
+    app/controllers/movies_controller.rb:22:in `index'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:27:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 758ms (View: 452, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:27:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 129ms (View: 105, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-10 21:31:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 760ms (View: 458, DB: 1) | 200 OK [http://localhost/movies?search=talladega]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-11 14:40:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-11 14:40:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 104ms (View: 101, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-11 14:40:58) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"SMgKNdU647mwbpTksdQBMV2x9616wj9+QfgfAjOKPus=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (16.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 91ms (DB: 17) | 302 Found [http://localhost/sessions]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-11 14:40:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.8ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 343ms (View: 65, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-11 14:41:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies", "search"=>"talladega"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 701ms (View: 391, DB: 1) | 200 OK [http://localhost/movies?search=talladega]

@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     @imdb_base_url = "http://www.imdb.com/title/"
+    @result_counter = 0
 
     require 'rubygems'
     require 'tmdb_party'
@@ -97,4 +98,15 @@ class MoviesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def seenit
+    
+    # TODO add checked movies to movies table if they aren't already there
+    
+    # TODO add checked movies to the current user's watched table
+    
+    redirect_to watcheds_path
+    
+  end  
+  
 end
