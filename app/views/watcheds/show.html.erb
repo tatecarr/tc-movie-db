@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @watched.user_id %>
+</p>
+
+<p>
+  <b>Movie:</b>
+  <%=h @watched.imdb_id %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @watched.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_watched_path(@watched) %> |
+<%= link_to 'Back', watcheds_path %>

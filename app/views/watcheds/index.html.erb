@@ -1,0 +1,31 @@
+<h1>Listing watcheds</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Overview</th>
+		<th></th>
+		<th>Release date</th>
+		<th>Comment</th>
+	</tr>
+
+	<% for watched in @watcheds.reverse do %>
+	
+		<% if watched.user_id == User.find_by_username(current_user.username).id %>
+	
+			<% movie = Movie.find_by_imdb_id(watched.imdb_id) %>
+
+			<tr>
+				<td><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/"%></td>
+				<td><img src=<%= movie.thumb_img_url %> /></td>
+				<td><%= movie.overview %></td>
+				<td><%= movie.released %></td>
+				<td></td>
+			</tr>
+		
+		<% end %>
+	
+	<% end %>
+</table>
+
+<br />

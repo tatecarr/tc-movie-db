@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Watcheds: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<div align="center">
+	
+	<div id="logout" align="right" style="width:1000px">
+		<% if logged_in? %>
+		<p>You are logged in as <%= current_user.username %></p>
+		<p>Click here to <%= link_to "Logout", logout_path %></p>
+		<% end %>
+	</div>
+	<div id="header" align="left" style="width:800px; font-size:16pt">
+		<%= link_to "Add a movie", movies_path %>
+	</div>
+	
+	<div style="width:1000px">
+		
+		<%= yield %>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>
