@@ -13541,3 +13541,38 @@ Processing MoviesController#index (for 127.0.0.1 at 2009-12-12 17:33:16) [GET]
 Rendering template within layouts/movies
 Rendering movies/index
 Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-12 17:38:22) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-12 17:38:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-12 17:38:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-12 17:38:25) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"SMgKNdU647mwbpTksdQBMV2x9616wj9+QfgfAjOKPus=", "controller"=>"sessions", "login"=>"tate", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tate') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-12-12 17:38:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mMovie Load (0.9ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/]
