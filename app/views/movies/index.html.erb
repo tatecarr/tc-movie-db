@@ -6,7 +6,7 @@
 		<%= submit_tag "Search", :name => nil %>
 	</p>
 <% end %>
-
+<br/><br/>
 <% if @results %>
 	<table style="border:solid; border-width:1px;">
 		
@@ -62,13 +62,12 @@
 
 	</table>
 <% else %>
-	<p>No results, sorry!</p>
+	<p style="font-size:20pt">Enter the title of a movie and click search!</p>
 <% end %>
 
-
 <br/>
 <br/>
-<br/>
+<p style="font-size:16pt"><u><b>The last 5 movies that have been watched:</b></u></p>
 <table>
 	<tr>
 		<td><b>Title</b></td>
