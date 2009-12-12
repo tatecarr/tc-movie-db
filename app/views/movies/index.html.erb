@@ -8,9 +8,9 @@
 <% end %>
 
 <% if @results %>
-	<table style="border:solid; border-width:1px;>
+	<table style="border:solid; border-width:1px;">
 		
-		<% form_tag movies_path, :method => :put do %>
+		<% form_tag :action => "update_movies_and_watched", :method => :put do %>
 		
 			<tr align="center">
 				<td><%= submit_tag "Seen it!" %></td>
@@ -21,12 +21,19 @@
 			</tr>
 		
 			<% @results.each do |result| %>
-				<% puts @result_counter %>
 
 					<tr>
 				
 						<td>
-							<%= check_box_tag "result_num", @result_counter %>
+							<% if result.posters[0] && result.posters[0]['original'] %>
+								<% @original_img = result.posters[0]['original'] %>
+							<% end %>
+							
+							<% if result.posters[0] && result.posters[0]['thumb'] %>
+								<% @thumb_img = result.posters[0]['thumb'] %>
+							<% end %>
+							
+							<%= check_box_tag "seen_movies[]", result.name+"@@"+result.imdb_id+"@@"+result.released.to_s+"@@"+result.overview+"@@"+@original_img+"@@"+@thumb_img%>
 						</td>
 						<td>
 							<%= link_to result.name, @imdb_base_url+result.imdb_id+"/"%>
@@ -42,15 +49,12 @@
 							<%= result.overview %> <br/>
 						</td>
 						<td>
-							<% puts result.released.class %>
 							<% if result.released != nil && result.released.class != String %>
 								<%= result.released.to_date.strftime("%B %d, %Y") %>
 							<% end %>
 						</td>
 			
 					</tr>
-			
-				<% @result_counter = @result_counter + 1 %>
 			
 			<% end %>
 
@@ -60,5 +64,29 @@
 <% else %>
 	<p>No results, sorry!</p>
 <% end %>
+
+
+<br/>
+<br/>
+<br/>
+<table>
+	<tr>
+		<td><b>Title</b></td>
+		<td></td>
+		<td><b>Plot overview</b></td>
+		<td><b>Release date</b></td>
+	</tr>
+	
+	<% for count in 0..4 do %>
+		<% movie = @movies.reverse[count] %>
+		<tr>
+			<td><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/"%></td>
+			<td><img src=<%= movie.thumb_img_url %> /></td>
+			<td><%= movie.overview %></td>
+			<td><%= movie.released %></td>
+		</tr>
+	<% end %>
+	
+</table>
 
 <br />

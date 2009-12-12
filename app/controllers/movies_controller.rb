@@ -7,18 +7,22 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     @imdb_base_url = "http://www.imdb.com/title/"
-    @result_counter = 0
 
     require 'rubygems'
     require 'tmdb_party'
     @tmdb = TMDBParty::Base.new('b81cd5766890f20ece59ed3ad4573173')
 
     @results = nil
-    
+    @original_img = "none"
+    @thumb_img = "none"
+#puts "GETS TO THIS POINT 1"
+#puts params[:search]
     if params[:search]
+#puts "GETS TO THIS POINT 1.1"
       @results = @tmdb.search(params[:search])
+#puts "GETS TO THIS POINT 1.2"
     end
-
+#puts "GETS TO THIS POINT 2"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @movies }
@@ -99,14 +103,70 @@ class MoviesController < ApplicationController
     end
   end
   
-  def seenit
+  def update_movies_and_watched
     
-    # TODO add checked movies to movies table if they aren't already there
+    successful_save = true
     
-    # TODO add checked movies to the current user's watched table
+    params[:seen_movies].each do |movie_details|
+      
+      details = movie_details.split("@@")
+        
+      #name
+      #imdb_id
+      #released
+      #overview
+      #@original_img
+      #@thumb_img
+      
+      theTime = Time.now
+      
+      @watched = Watched.new({:user_id => User.find_by_username(current_user.username).id, :imdb_id => details[1], :created_at => theTime, :updated_at => theTime})
+      
+      if !Movie.find_by_imdb_id(details[1])
+        
+          @movie = Movie.new({:title => details[0], :imdb_id => details[1], :released => details[2], :overview => details[3], :original_img_url => details[4], :thumb_img_url => details[5], :created_at => theTime, :updated_at => theTime})
+        
+          if !@movie.save || !@watched.save
+            successful_save = false
+          end
+            #flash[:notice] = 'Successfully added to watched list.'
+            #format.html { redirect_to(watcheds_path) }
+            #format.xml  { render :xml => @movie, :status => :created, :location => @movie }
+          #else
+          #  flash[:notice] = 'There was an error recording the movie(s) you\'ve watched.  Please try again.'
+          #  format.html { render :action => "index" }
+          #  format.xml  { render :xml => @movie.errors, :status => :unprocessable_entity }
+          #end
+        
+      else
+        
+          #respond_to do |format|
+          if !@watched.save
+            successful_save = false
+          end
+          
+            #flash[:notice] = 'Successfully added to watched list.'
+            #format.html { redirect_to(watcheds_path) }
+            #format.xml  { render :xml => @movie, :status => :created, :location => @movie }
+          #else
+            #flash[:notice] = 'There was an error recording the movie(s) you\'ve watched.  Please try again.'
+            #format.html { render :action => "index" }
+            #format.xml  { render :xml => @movie.errors, :status => :unprocessable_entity }
+          #end
+        #end
+          
+      end
+      
+    end
     
-    redirect_to watcheds_path
+    if successful_save
+        flash[:notice] = 'Successfully added to watched list.'
+        redirect_to(watcheds_path)
+    else
+        flash[:notice] = 'There was an error recording the movie(s) you\'ve watched.  Please try again.'
+        render :action => "index"
+    end
     
-  end  
+  end
   
 end
