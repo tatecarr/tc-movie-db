@@ -88,14 +88,14 @@
 		</tr>
 	<% elsif @watched.length < 5 %>
 		<tr>
-			<% for watch in @watched do %>
-				<% movie = Movie.find_by_imdb_id(@watched.reverse[watch].imdb_id) %>
+			<% for watch in @watched.reverse do %>
+				<% movie = Movie.find_by_imdb_id(watch.imdb_id) %>
 				<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), @imdb_base_url+movie.imdb_id+"/" %></td>
 			<% end %>
 		</tr>
 		<tr>
-			<% for watch in @watched do %>
-				<% movie = Movie.find_by_imdb_id(@watched.reverse[watch].imdb_id) %>
+			<% for watch in @watched.reverse do %>
+				<% movie = Movie.find_by_imdb_id(watch.imdb_id) %>
 				<td width="200px"><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/" %></td>
 			<% end %>
 		</tr>

@@ -5,6 +5,8 @@ When creating users it won't create them with the first and last name.
 create show page for a watched movie with the bigger picture.
 
 
+show message when you haven't watched any movies yet instead of empty table.
+
 ****set height of list of results and seen movies, and the width of the recently seen movies.
 
 when there are no search results, don't show the table, put a string there.
@@ -17,6 +19,7 @@ make the checkmark images take you to the show page for that movie you've seen.
 ----comments will go on the show page and can be edited.
 
 center the login page and make it bigger with a cool font and border and such, maybe a nice logo from illustrator?
+
 
 
 
