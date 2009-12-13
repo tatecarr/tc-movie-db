@@ -6,7 +6,10 @@ class MoviesController < ApplicationController
   # GET /movies.xml
   def index
     @movies = Movie.all
+    @watched = Watched.all
     @imdb_base_url = "http://www.imdb.com/title/"
+    @current_user_id = User.find_by_username(current_user.username).id
+    @imdb_ids_displayed = []    
 
     require 'rubygems'
     require 'tmdb_party'

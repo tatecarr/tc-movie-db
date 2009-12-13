@@ -8,11 +8,11 @@
 <% end %>
 <br/><br/>
 <% if @results %>
-	<table style="border:solid; border-width:1px;">
+	<table style="border:solid; border-width:1px; text-align:center">
 		
 		<% form_tag :action => "update_movies_and_watched", :method => :put do %>
 		
-			<tr align="center">
+			<tr align="center" height="50px">
 				<td><%= submit_tag "Seen it!" %></td>
 				<td><b>Title</b></td>
 				<td></td>
@@ -21,10 +21,11 @@
 			</tr>
 		
 			<% @results.each do |result| %>
+			
+				<% if result.imdb_id != "" && !@imdb_ids_displayed.include?(result.imdb_id)%>
 
-					<tr>
-				
-						<td>
+					<tr height="160px">				
+						<td width="80">
 							<% if result.posters[0] && result.posters[0]['original'] %>
 								<% @original_img = result.posters[0]['original'] %>
 							<% end %>
@@ -33,7 +34,14 @@
 								<% @thumb_img = result.posters[0]['thumb'] %>
 							<% end %>
 							
-							<%= check_box_tag "seen_movies[]", result.name+"@@"+result.imdb_id+"@@"+result.released.to_s+"@@"+result.overview+"@@"+@original_img+"@@"+@thumb_img%>
+							<% already_seen = Watched.find(:all, :conditions => ['imdb_id = ? AND user_id = ?', result.imdb_id, @current_user_id]) %>
+							<% puts already_seen.length %>
+							
+							<% if already_seen.length > 0 %>
+								<%= image_tag "check_mark.jpg" %>
+							<% else %>
+								<%= check_box_tag "seen_movies[]", result.name+"@@"+result.imdb_id+"@@"+result.released.to_s+"@@"+result.overview+"@@"+@original_img+"@@"+@thumb_img%>
+							<% end %>
 						</td>
 						<td>
 							<%= link_to result.name, @imdb_base_url+result.imdb_id+"/"%>
@@ -42,7 +50,7 @@
 							<% if result.posters[0] == nil || result.posters[0]['thumb'] == nil %>
 							 	No image<br/>available.
 							<% else %>
-								<img src=<%= result.posters[0]['thumb'] %> />
+								<%= link_to image_tag(result.posters[0]['thumb'], :border => 0), @imdb_base_url+result.imdb_id+"/" %>
 							<% end %>
 						</td>
 						<td>
@@ -53,8 +61,11 @@
 								<%= result.released.to_date.strftime("%B %d, %Y") %>
 							<% end %>
 						</td>
-			
 					</tr>
+					
+					<% @imdb_ids_displayed << result.imdb_id %>
+					
+				<% end %>
 			
 			<% end %>
 
@@ -67,25 +78,42 @@
 
 <br/>
 <br/>
-<p style="font-size:16pt"><u><b>The last 5 movies that have been watched:</b></u></p>
-<table>
-	<tr>
-		<td><b>Title</b></td>
-		<td></td>
-		<td><b>Plot overview</b></td>
-		<td><b>Release date</b></td>
-	</tr>
+<p style="font-size:16pt"><u><b>Recently watched movies:</b></u></p>
+
+<table style="text-align:center" >
 	
-	<% for count in 0..4 do %>
-		<% movie = @movies.reverse[count] %>
+	<% if @watched.length == 0 %>
 		<tr>
-			<td><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/"%></td>
-			<td><img src=<%= movie.thumb_img_url %> /></td>
-			<td><%= movie.overview %></td>
-			<td><%= movie.released %></td>
+			<td><p style="font-size:14pt">No movies have been watched recently.</p></td>
+		</tr>
+	<% elsif @watched.length < 5 %>
+		<tr>
+			<% for watch in @watched do %>
+				<% movie = Movie.find_by_imdb_id(@watched.reverse[watch].imdb_id) %>
+				<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), @imdb_base_url+movie.imdb_id+"/" %></td>
+			<% end %>
+		</tr>
+		<tr>
+			<% for watch in @watched do %>
+				<% movie = Movie.find_by_imdb_id(@watched.reverse[watch].imdb_id) %>
+				<td width="200px"><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/" %></td>
+			<% end %>
+		</tr>
+	<% else %>
+		<tr>
+			<% for count in 0..4 do %>
+				<% movie = Movie.find_by_imdb_id(@watched.reverse[count].imdb_id) %>
+				<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), @imdb_base_url+movie.imdb_id+"/" %></td>
+			<% end %>
+		</tr>
+		<tr>
+			<% for count in 0..4 do %>
+				<% movie = Movie.find_by_imdb_id(@watched.reverse[count].imdb_id) %>
+				<td width="200px"><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/" %></td>
+			<% end %>
 		</tr>
 	<% end %>
 	
 </table>
 
-<br />
+<br/>

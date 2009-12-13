@@ -1,12 +1,11 @@
 <h1>Listing watcheds</h1>
 
-<table>
-	<tr>
+<table style="border:solid; border-width:1px; text-align:center">
+	<tr height="30px">
 		<th>Title</th>
 		<th>Overview</th>
 		<th></th>
 		<th>Release date</th>
-		<th>Comment</th>
 	</tr>
 
 	<% for watched in @watcheds.reverse do %>
@@ -15,12 +14,11 @@
 	
 			<% movie = Movie.find_by_imdb_id(watched.imdb_id) %>
 
-			<tr>
+			<tr height="160px">
 				<td><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/"%></td>
-				<td><img src=<%= movie.thumb_img_url %> /></td>
+				<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), @imdb_base_url+movie.imdb_id+"/" %></td>
 				<td><%= movie.overview %></td>
 				<td><%= movie.released %></td>
-				<td></td>
 			</tr>
 		
 		<% end %>

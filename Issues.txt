@@ -1,2 +1,34 @@
 When creating users it won't create them with the first and last name.
 
+
+
+create show page for a watched movie with the bigger picture.
+
+
+****set height of list of results and seen movies, and the width of the recently seen movies.
+
+when there are no search results, don't show the table, put a string there.
+
+fix the problem where you can go to the movie search page when there aren't any movies in the db yet.
+
+fix issue where there is a nil error when "seen it" has been clicked but no checkboxes have been checked.
+
+make the checkmark images take you to the show page for that movie you've seen.
+----comments will go on the show page and can be edited.
+
+center the login page and make it bigger with a cool font and border and such, maybe a nice logo from illustrator?
+
+
+
+add search to movies that you've seen.
+
+add autocomplete of search to movies that are in the database.
+
+change shading of an image when the mouse is over it.
+
+number the search results maybe.
+
+have the first search boxes be focussed when the pages load.
+
+Make it prettier!
+
