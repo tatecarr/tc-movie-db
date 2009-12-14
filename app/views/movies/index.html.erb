@@ -6,8 +6,16 @@
 		<%= submit_tag "Search", :name => nil %>
 	</p>
 <% end %>
+
 <br/><br/>
-<% if @results %>
+<% if !@results %>
+	<p style="font-size:20pt">Enter the title of a movie and click search!</p>
+<% elsif @results.length == 0 %>
+	<p style="font-size:20pt">There were no results, try again!</p>
+<% else %>
+<% puts "HERE HERE HRERE" %>
+<% puts @results.class %>
+<% puts @results.length %>
 	<table style="border:solid; border-width:1px; text-align:center">
 		
 		<% form_tag :action => "update_movies_and_watched", :method => :put do %>
@@ -72,11 +80,8 @@
 		<% end %>
 
 	</table>
-<% else %>
-	<p style="font-size:20pt">Enter the title of a movie and click search!</p>
 <% end %>
 
-<br/>
 <br/>
 <br/>
 <br/>
