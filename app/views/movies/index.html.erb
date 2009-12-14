@@ -10,8 +10,10 @@
 <br/><br/>
 <% if !@results %>
 	<p style="font-size:20pt">Enter the title of a movie and click search!</p>
+	<br/><br/><br/>
 <% elsif @results.length == 0 %>
 	<p style="font-size:20pt">There were no results, try again!</p>
+	<br/><br/><br/>
 <% else %>
 <% puts "HERE HERE HRERE" %>
 <% puts @results.class %>
@@ -82,7 +84,6 @@
 	</table>
 <% end %>
 
-<br/>
 <br/>
 <br/>
 <p style="font-size:16pt"><u><b>Recently watched movies:</b></u></p>
