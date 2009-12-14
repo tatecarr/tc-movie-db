@@ -25,8 +25,8 @@
 				<% movie = Movie.find_by_imdb_id(watched.imdb_id) %>
 
 				<tr height="160px">
-					<td><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/"%></td>
-					<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), @imdb_base_url+movie.imdb_id+"/" %></td>
+					<td><%= link_to movie.title, watched %></td>
+					<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), watched %></td>
 					<td><%= movie.overview %></td>
 					<td><%= movie.released %></td>
 				</tr>

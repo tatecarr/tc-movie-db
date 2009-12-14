@@ -13,6 +13,8 @@
   <%=h @watched.comment %>
 </p>
 
+<%= image_tag Movie.find_by_imdb_id(@watched.imdb_id).original_img_url, :border => 0 %>
+
 
 <%= link_to 'Edit', edit_watched_path(@watched) %> |
 <%= link_to 'Back', watcheds_path %>
