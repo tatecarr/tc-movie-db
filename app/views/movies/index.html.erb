@@ -34,8 +34,8 @@
 
 					<tr height="160px">				
 						<td width="80">
-							<% if result.posters[0] && result.posters[0]['original'] %>
-								<% @original_img = result.posters[0]['original'] %>
+							<% if result.posters[0] && result.posters[0]['cover'] %>
+								<% @original_img = result.posters[0]['cover'] %>
 							<% end %>
 							
 							<% if result.posters[0] && result.posters[0]['thumb'] %>
