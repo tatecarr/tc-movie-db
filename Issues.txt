@@ -4,12 +4,7 @@ When creating users it won't create them with the first and last name.
 
 create show page for a watched movie with the bigger picture.
 
-
-show message when you haven't watched any movies yet instead of empty table.
-
-****set height of list of results and seen movies, and the width of the recently seen movies.
-
-when there are no search results, don't show the table, put a string there.
+***********when there are no search results, don't show the table, put a string there.
 
 fix the problem where you can go to the movie search page when there aren't any movies in the db yet.
 

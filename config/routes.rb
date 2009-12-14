@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :watcheds
 
-  map.root :controller => 'watcheds'
+  map.root :controller => 'movies'
+  
+  map.viewedmovies 'viewedmovies', :controller => 'watcheds'
   
   map.resources :home
   

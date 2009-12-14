@@ -1,29 +1,42 @@
-<h1>Listing watcheds</h1>
 
-<table style="border:solid; border-width:1px; text-align:center">
-	<tr height="30px">
-		<th>Title</th>
-		<th>Overview</th>
-		<th></th>
-		<th>Release date</th>
-	</tr>
-
-	<% for watched in @watcheds.reverse do %>
+<% if Watched.find(:all, :conditions => ['user_id = ?', @current_user_id]).length == 0 %>
 	
-		<% if watched.user_id == User.find_by_username(current_user.username).id %>
+	<br/><br/><br/>
+	<p style="font-size:16pt">You have not added any movies to your watched list yet.</p>
+	<p style="font-size:16pt">Click <%= link_to "here", movies_path %> to add one now.</p>
 	
-			<% movie = Movie.find_by_imdb_id(watched.imdb_id) %>
+<% else %>
 
-			<tr height="160px">
-				<td><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/"%></td>
-				<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), @imdb_base_url+movie.imdb_id+"/" %></td>
-				<td><%= movie.overview %></td>
-				<td><%= movie.released %></td>
-			</tr>
+	<h1>Movies I have seen:</h1><br/><br/>
+	
+	<table style="border:solid; border-width:1px; text-align:center">
 		
-		<% end %>
-	
-	<% end %>
-</table>
+		<tr height="30px">
+			<th>Title</th>
+			<th>Overview</th>
+			<th></th>
+			<th>Release date</th>
+		</tr>
 
-<br />
+		<% for watched in @watcheds.reverse do %>
+	
+			<% if watched.user_id == User.find_by_username(current_user.username).id %>
+	
+				<% movie = Movie.find_by_imdb_id(watched.imdb_id) %>
+
+				<tr height="160px">
+					<td><%= link_to movie.title, @imdb_base_url+movie.imdb_id+"/"%></td>
+					<td><%= link_to image_tag(movie.thumb_img_url, :border => 0), @imdb_base_url+movie.imdb_id+"/" %></td>
+					<td><%= movie.overview %></td>
+					<td><%= movie.released %></td>
+				</tr>
+		
+			<% end %>
+	
+		<% end %>
+		
+	</table>
+		
+<% end %>
+
+<br/>

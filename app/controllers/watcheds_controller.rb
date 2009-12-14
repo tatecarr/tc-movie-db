@@ -7,6 +7,7 @@ class WatchedsController < ApplicationController
   def index
     @watcheds = Watched.all
     @imdb_base_url = "http://www.imdb.com/title/"
+    @current_user_id = User.find_by_username(current_user.username).id
 
     respond_to do |format|
       format.html # index.html.erb

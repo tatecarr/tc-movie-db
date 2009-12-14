@@ -164,7 +164,7 @@ class MoviesController < ApplicationController
     
     if successful_save
         flash[:notice] = 'Successfully added to watched list.'
-        redirect_to(watcheds_path)
+        redirect_to(viewedmovies_path)
     else
         flash[:notice] = 'There was an error recording the movie(s) you\'ve watched.  Please try again.'
         render :action => "index"
