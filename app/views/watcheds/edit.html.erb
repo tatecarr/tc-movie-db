@@ -1,18 +1,14 @@
-<h1>Editing watched</h1>
-
+<br/>
 <% form_for(@watched) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :imdb_id %><br />
-    <%= f.text_field :imdb_id %>
-  </p>
-  <p>
-    <%= f.label :comment %><br />
+    <% if !@watched.comment || @watched.comment == "" %>
+		<p style="font-size:14pt">Add your comment...</p>
+	<% else %>
+		<p style="font-size:14pt">Edit your comment...</p>
+	<% end %>
+
     <%= f.text_area :comment %>
   </p>
   <p>

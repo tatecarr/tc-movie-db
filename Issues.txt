@@ -2,13 +2,15 @@ When creating users it won't create them with the first and last name.
 
 
 
-*******create show page for a watched movie with the bigger picture.
+
+fix when there is no overview for a movie to say so instead of blank space on the search results and watched "show" page.
+
+
+fix the rows of the watched index page so the image and title are separate rows
 
 
 fix issue where there is a nil error when "seen it" has been clicked but no checkboxes have been checked.
 
-make the checkmark images take you to the show page for that movie you've seen.
-----comments will go on the show page and can be edited.
 
 center the login page and make it bigger with a cool font and border and such, maybe a nice logo from illustrator?
 

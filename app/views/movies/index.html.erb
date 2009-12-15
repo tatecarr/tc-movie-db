@@ -43,7 +43,6 @@
 							<% end %>
 							
 							<% already_seen = Watched.find(:all, :conditions => ['imdb_id = ? AND user_id = ?', result.imdb_id, @current_user_id]) %>
-							<% puts already_seen.length %>
 							
 							<% if already_seen.length > 0 %>
 								<%= image_tag "check_mark.jpg" %>
@@ -54,17 +53,21 @@
 						<td>
 							<%= link_to result.name, @imdb_base_url+result.imdb_id+"/"%>
 						</td>				
-						<td>
+						<td width="115px">
 							<% if result.posters[0] == nil || result.posters[0]['thumb'] == nil %>
 							 	No image<br/>available.
 							<% else %>
 								<%= link_to image_tag(result.posters[0]['thumb'], :border => 0), @imdb_base_url+result.imdb_id+"/" %>
 							<% end %>
 						</td>
-						<td>
-							<%= result.overview %> <br/>
+						<td width="400">
+							<% if !result.overview || result.overview == "" %>
+								<p>There is no overview available for this movie.</p>
+							<% else %>
+								<%= result.overview %> <br/>
+							<% end %>
 						</td>
-						<td>
+						<td width="90px">
 							<% if result.released != nil && result.released.class != String %>
 								<%= result.released.to_date.strftime("%B %d, %Y") %>
 							<% end %>

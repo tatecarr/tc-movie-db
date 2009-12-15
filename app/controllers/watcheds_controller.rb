@@ -6,8 +6,12 @@ class WatchedsController < ApplicationController
   # GET /watcheds.xml
   def index
     @watcheds = Watched.all
+    @number_in_row = 0
     @imdb_base_url = "http://www.imdb.com/title/"
     @current_user_id = User.find_by_username(current_user.username).id
+    @my_watched = Watched.find(:all, :conditions => ['user_id = ?', @current_user_id], :order => "updated_at DESC")
+    #@my_watched = Watched.find_by_sql("select watcheds.user_id, watcheds.comment, watcheds.imdb_id from watcheds join movies on watcheds.imdb_id = movies.imdb_id where watcheds.user_id = 1 order by movies.title")
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,11 +23,10 @@ class WatchedsController < ApplicationController
   # GET /watcheds/1.xml
   def show
     @watched = Watched.find(params[:id])
+    @movie = Movie.find_by_imdb_id(@watched.imdb_id)
     @imdb_base_url = "http://www.imdb.com/title/"
     @current_user_id = User.find_by_username(current_user.username).id
     
-    
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @watched }

@@ -1,20 +1,44 @@
-<p>
-  <b>User:</b>
-  <%=h @watched.user_id %>
-</p>
-
-<p>
-  <b>Movie:</b>
-  <%=h @watched.imdb_id %>
-</p>
-
-<p>
-  <b>Comment:</b>
-  <%=h @watched.comment %>
-</p>
-
-<%= image_tag Movie.find_by_imdb_id(@watched.imdb_id).original_img_url, :border => 0 %>
 
 
-<%= link_to 'Edit', edit_watched_path(@watched) %> |
-<%= link_to 'Back', watcheds_path %>
+<table cellpadding="20px">
+	<tr>
+		<td>
+			<%= image_tag Movie.find_by_imdb_id(@watched.imdb_id).original_img_url, :border => 0 %>
+			<div align="center">
+				<p><%= link_to image_tag("imdb-logo_smaller.png", :border => 0), @imdb_base_url+@movie.imdb_id+"/", :class => "none" %></p>
+			</div>
+		</td>
+		<td>
+			
+				<span style="font-size:26pt; line-height:35px"><b><%= @movie.title %></b></span>
+				<br/><br/>
+			
+			
+				<% if @movie.released %>
+					<%= @movie.released.strftime("Released on %B %d, %Y") %>.<br/><br/>
+				<% end %>
+			
+			
+			<h3>Overview</h3>
+			<% if !@movie.overview || @movie.overview == "" %>
+				<p>There is no overview available for this movie.</p><br/>
+			<% else %>
+				<p><%= @movie.overview %></p><br/>
+			<% end %>
+
+
+			<% if !@watched.comment || @watched.comment == "" %>
+				<h3>Comment</h3>
+				<div align="center">
+					<p>You have not added a comment yet, click <%= link_to 'here', edit_watched_path(@watched) %> to add one.</p>
+				</div>
+			<% else %>
+				<h3>Comment <%= link_to 'Edit', edit_watched_path(@watched) %></h3>
+				<%= @watched.comment %>
+			<% end %>
+			
+			<br/><br/><br/><br/>
+
+		</td>
+	</tr>
+</table>

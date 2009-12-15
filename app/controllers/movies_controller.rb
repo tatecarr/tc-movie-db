@@ -18,14 +18,25 @@ class MoviesController < ApplicationController
     @results = nil
     @original_img = "none"
     @thumb_img = "none"
-#puts "GETS TO THIS POINT 1"
-#puts params[:search]
+
     if params[:search]
-#puts "GETS TO THIS POINT 1.1"
+
       @results = @tmdb.search(params[:search])
-#puts "GETS TO THIS POINT 1.2"
+
+      valid_results = false
+      for res in @results do
+        if res.imdb_id && res.imdb_id != ""
+          valid_results = true
+        end
+      end
+    
+      if !valid_results
+        @results = []
+      end
+
     end
-#puts "GETS TO THIS POINT 2"
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @movies }

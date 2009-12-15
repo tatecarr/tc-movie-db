@@ -13,17 +13,28 @@
 
 <div align="center">
 	
-	<div id="logout" align="right" style="width:1000px">
-		<% if logged_in? %>
-		<p>You are logged in as <%= current_user.username %></p>
-		<p>Click here to <%= link_to "Logout", logout_path %></p>
-		<% end %>
-	</div>
-	<div id="header" align="left" style="width:800px; font-size:16pt">
-		<%= link_to "My Viewed Movies", viewedmovies_path %>
-	</div>
+	<div align="center" style="width:760px">
+		<table style="text-align:center">
+			<tr>
+				<td style="width:250px">
+					<%= link_to "Search for a Movie", movies_path %>
+				</td>
+				<td style="width:250px">
+					<%= link_to "My Viewed Movies", viewedmovies_path %>
+				</td>
+				<td style="width:250px">
+					<% if logged_in? %>
+					<p>
+						You are logged in as <%= current_user.username %><br/>
+						Click here to <%= link_to "Logout", logout_path %>
+					</p>
+					<% end %>
+				</td>
+			</tr>
+		</table>
+	</div><br/>
 	
-	<div style="width:1000px">
+	<div style="width:760px">
 		
 		<%= yield %>
 		
