@@ -1,3 +1,25 @@
+<script type="text/javascript">
+
+function disableButton() {
+	//alert("gets here!");
+		
+	if(document.getElementById("submit_button") != null) {
+		
+		//alert("stop number 2");
+		//document.getElementById("submit_button").disabled = true;
+
+	}
+}
+
+function enableButton() {
+	
+	//alert("probably won't get here")
+	document.getElementById("submit_button").disabled = false;
+	
+}
+
+</script>
+
 <h1>Search for a movie</h1>
 
 <% form_tag movies_path, :method => 'get' do %>
@@ -21,7 +43,7 @@
 		<% form_tag :action => "update_movies_and_watched", :method => :put do %>
 		
 			<tr align="center" height="50px">
-				<td><%= submit_tag "Seen it!" %></td>
+				<td><%= submit_tag "Seen it!", :id => "submit_button" %></td>
 				<td><b>Title</b></td>
 				<td></td>
 				<td><b>Plot overview</b></td>
@@ -47,9 +69,9 @@
 							<% if already_seen.length > 0 %>
 								<%= image_tag "check_mark.jpg" %>
 							<% else %>
-								<%= check_box_tag "seen_movies[]", result.name+"@@"+result.imdb_id+"@@"+result.released.to_s+"@@"+result.overview+"@@"+@original_img+"@@"+@thumb_img%>
+								<%= check_box_tag "seen_movies[]", result.name+"@@"+result.imdb_id+"@@"+result.released.to_s+"@@"+result.overview+"@@"+@original_img+"@@"+@thumb_img %>
 							<% end %>
-						</td>
+						</td width="50px">
 						<td>
 							<%= link_to result.name, @imdb_base_url+result.imdb_id+"/"%>
 						</td>				
@@ -60,7 +82,7 @@
 								<%= link_to image_tag(result.posters[0]['thumb'], :border => 0), @imdb_base_url+result.imdb_id+"/" %>
 							<% end %>
 						</td>
-						<td width="400">
+						<td width="350">
 							<% if !result.overview || result.overview == "" %>
 								<p>There is no overview available for this movie.</p>
 							<% else %>

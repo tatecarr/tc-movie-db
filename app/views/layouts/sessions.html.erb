@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Watcheds: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+<div align="center">
+	<p style="color:green; font-size:12pt"><%= flash[:notice] %></p>
+</div>
+
+<div align="center">
+	
+	<div align="center" style="width:760px; border:solid">
+		
+		<%= image_tag("banner.png") %>
+		
+	</div>
+	
+	<div style="width:760px; background-color:#c2c2c2">
+		
+		<%= yield %>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>

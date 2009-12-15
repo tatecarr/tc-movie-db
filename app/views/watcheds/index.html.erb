@@ -7,30 +7,47 @@
 	
 <% else %>
 
-	<h1>Movies I have seen:</h1><br/>
+	<h1>Movies I have seen:</h1>
+	
+	<div align="left" style="width:700px">
+		<% form_tag watcheds_path, :method => 'get' do %>
+			<%= select_tag "alpha", "<option>Alphabetical</option><option>Recently viewed</option>" %>
+			<%= submit_tag "Go", :name => nil %>
+		<% end %>
+	</div><br/>
 	
 	<table style="border:solid; border-width:1px; text-align:center">
-		
+		<tr><td><br/></td></tr>
 		<% for watched in @my_watched do %>
 		
 			<% movie = Movie.find_by_imdb_id(watched.imdb_id) %>
 			
 			<% if @number_in_row % 5 == 0 %>
-				<tr height="200px">
+				<tr>
 					<td width="150px">
-						<%= link_to image_tag(movie.thumb_img_url, :border => 0), watched %><br/>
-						<%= link_to movie.title, watched %>
+						<%= link_to image_tag(movie.thumb_img_url, :border => 0), watched %>
+						<% @last_five <<  movie.title %>
+						<% @last_five << watched %>
 					</td>
 			<% elsif @number_in_row % 5 == 4 %>
 					<td width="150px">
-						<%= link_to image_tag(movie.thumb_img_url, :border => 0), watched %><br/>
-						<%= link_to movie.title, watched %>
+						<%= link_to image_tag(movie.thumb_img_url, :border => 0), watched %>
+						<% @last_five <<  movie.title %>
+						<% @last_five << watched %>
 					</td>
 				</tr>
+				<% @last_five.reverse! %>
+				<tr>
+					<% for elem in 1..5 do %>
+						<td><%= link_to @last_five.pop, @last_five.pop %><br/><br/></td>
+					<% end %>
+				</tr>
+				<% @last_five = [] %>
 			<% else %>
 					<td width="150px">
-						<%= link_to image_tag(movie.thumb_img_url, :border => 0), watched %><br/>
-						<%= link_to movie.title, watched %>
+						<%= link_to image_tag(movie.thumb_img_url, :border => 0), watched %>
+						<% @last_five <<  movie.title %>
+						<% @last_five << watched %>
 					</td>
 			<% end %>
 						
@@ -39,6 +56,13 @@
 		
 		<% if @number_in_row % 5 != 4 %>
 			</tr>
+			<% @last_five.reverse! %>
+			<tr>
+				<% for elem in 1..(@last_five.length/2) do %>
+					<td><%= link_to @last_five.pop, @last_five.pop %><br/><br/></td>
+				<% end %>
+			</tr>
+			<% @last_five = [] %>
 		<% end %>
 		
 	</table>

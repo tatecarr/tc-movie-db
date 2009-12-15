@@ -1,32 +1,36 @@
-<h1>Sign up!</h1>
+<br/><h1>Sign up!</h1>
 
 <p>Already have an account? <%= link_to "Log in", login_path %>.</p>
 
 <% form_for @user do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email, "Email Address" %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation, "Confirm Password" %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-  	<%= f.label :first_name %><br/>
-	<%= f.text_field :first_name %>
-  </p>
-  <p>
-  	<%= f.label :last_name %><br/>
-	<%= f.text_field :last_name %>
-  </p>
+	<table cellpadding="5px">
+		
+		<tr>
+	  		<td><%= f.label :username, nil, :class => 'entrylabel' %></td>
+			<td><%= f.text_field :username, :class => 'entryfield' %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :email, "Email Address", :class => 'entrylabel' %></td>
+			<td><%= f.text_field :email, :class => 'entryfield' %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :password, nil, :class => 'entrylabel' %></td>
+			<td><%= f.password_field :password, :class => 'entryfield' %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :password_confirmation, "Confirm Password", :class => 'entrylabel' %></td>
+			<td><%= f.password_field :password_confirmation, :class => 'entryfield' %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :first_name, nil, :class => 'entrylabel' %></td>
+			<td><%= f.text_field :first_name, :class => 'entryfield' %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :last_name, nil, :class => 'entrylabel' %></td>
+			<td><%= f.text_field :last_name, :class => 'entryfield' %></td>
+		</tr>
+
+	</table>
   <p><%= f.submit "Sign up" %></p>
 <% end %>

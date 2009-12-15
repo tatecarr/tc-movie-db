@@ -1,21 +1,14 @@
-When creating users it won't create them with the first and last name.
-
-
-
-
-fix when there is no overview for a movie to say so instead of blank space on the search results and watched "show" page.
-
-
-fix the rows of the watched index page so the image and title are separate rows
-
-
-fix issue where there is a nil error when "seen it" has been clicked but no checkboxes have been checked.
 
 
 center the login page and make it bigger with a cool font and border and such, maybe a nice logo from illustrator?
 
+make images for the links at the top of the page
 
 
+
+
+
+When creating users it won't create them with the first and last name.
 
 add search to movies that you've seen.
 

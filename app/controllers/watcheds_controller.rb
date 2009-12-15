@@ -7,11 +7,23 @@ class WatchedsController < ApplicationController
   def index
     @watcheds = Watched.all
     @number_in_row = 0
+    @last_five = []
     @imdb_base_url = "http://www.imdb.com/title/"
     @current_user_id = User.find_by_username(current_user.username).id
-    @my_watched = Watched.find(:all, :conditions => ['user_id = ?', @current_user_id], :order => "updated_at DESC")
-    #@my_watched = Watched.find_by_sql("select watcheds.user_id, watcheds.comment, watcheds.imdb_id from watcheds join movies on watcheds.imdb_id = movies.imdb_id where watcheds.user_id = 1 order by movies.title")
     
+    @sorted_by = ["Alphabetical", "Recently viewed"]
+    puts params[:alpha]
+    if params[:alpha]
+      @selected_sort = "Alphabetical"
+    else
+      @selected_sort = "Recently viewed"
+    end
+    
+    if !params[:alpha] || params[:alpha] == "Alphabetical"
+      @my_watched = Watched.find_by_sql("select watcheds.* from watcheds join movies on watcheds.imdb_id = movies.imdb_id where watcheds.user_id = #{@current_user_id} order by movies.title")
+    else
+      @my_watched = Watched.find(:all, :conditions => ['user_id = ?', @current_user_id], :order => "updated_at DESC")
+    end    
 
     respond_to do |format|
       format.html # index.html.erb

@@ -9,7 +9,9 @@
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+<div align="center">
+	<p style="color:green; font-size:12pt"><%= flash[:notice] %></p>
+</div>
 
 <div align="center">
 	
@@ -17,18 +19,24 @@
 		<table style="text-align:center">
 			<tr>
 				<td style="width:250px">
-					<%= link_to "Search for a Movie", movies_path %>
+					<div style="width:200px; height:38px">
+						<%= link_to image_tag("search_img.png", :border => 0,  :onmouseover => "this.src='/images/search_img_mo.png'", :onmouseout => "this.src='/images/search_img.png'"), movies_path %>
+					</div>
 				</td>
 				<td style="width:250px">
-					<%= link_to "My Viewed Movies", viewedmovies_path %>
+					<div style="width:200px; height:38px">
+						<%= link_to image_tag("myviewed_img.png", :border => 0,  :onmouseover => "this.src='/images/myviewed_img_mo.png'", :onmouseout => "this.src='/images/myviewed_img.png'"), viewedmovies_path %>
+					</div>
 				</td>
 				<td style="width:250px">
-					<% if logged_in? %>
-					<p>
-						You are logged in as <%= current_user.username %><br/>
-						Click here to <%= link_to "Logout", logout_path %>
-					</p>
-					<% end %>
+					<div style="width:200px; height:50px; background-color:rgb(124,128,151); color:white; text-align:center">
+						<% if logged_in? %>
+						<p>
+							Hey <%= current_user.username %><br/>
+							Click here to <%= link_to "Logout", logout_path, :class => 'logout' %>
+						</p>
+						<% end %>
+					</div>
 				</td>
 			</tr>
 		</table>

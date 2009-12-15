@@ -15,6 +15,18 @@ pre {
 a { color: #000; }
 a:visited { color: #666; }
 /** a:hover { color: #fff; background-color:#000; } **/
+a.logout {
+	color:white;
+}
+
+input.entryfield {
+	font-size:16pt;
+	width:275px;
+}
+
+label.entrylabel {
+	font-size:14pt;
+}
 
 .fieldWithErrors {
   padding: 2px;
